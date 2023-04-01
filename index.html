@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+<link rel="stylesheet" href="styles.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="brand"> snap </div>
+    <div class="menu-icon" onclick="openMenu()">
+      <img class="open-menu-icon" src="./images/icon-menu.svg" alt="" >
+     
+    </div>
+    <div class="navitems">
+     
+      <div class="navitems-left">
+        <ul>
+         <li class="close-menu-icon" onclick="closeMenu()">  <img  src="./images/icon-close-menu.svg" alt=""> </li> 
+          <li>  Features <span class="arrow-down"> <img src="./images/icon-arrow-down.svg" alt=""> </span> <span class="arrow-up"> <img src="./images/icon-arrow-up.svg" alt=""> </span>
+           
+            <div class="nav-dropdown"> <ul>
+              <li> <img class="dropdown-icon" src="./images/icon-todo.svg" alt=""> Todo List</li>
+              <li> <img class="dropdown-icon" src="./images/icon-calendar.svg" alt=""> Calender</li>
+              <li> <img class="dropdown-icon" src="./images/icon-reminders.svg" alt=""> Remainders</li>
+              <li> <img class="dropdown-icon" src="./images/icon-planning.svg" alt=""> Planning</li>
+            </ul> 
+           </div> 
+          </li>
+          <li>Company <span class="arrow-down"> <img src="./images/icon-arrow-down.svg" alt=""> </span> <span class="arrow-up"> <img src="./images/icon-arrow-up.svg" alt=""> </span>
+            <div class="nav-dropdown"> <ul>
+              <li>History</li>
+              <li>Our Team</li>
+              <li>Blog</li>
+            
+            </ul> </div> 
+          </li>
+          <li>Careers</li>
+          <li>About</li>
+        </ul>
+      </div>
+
+      <div class="navitems-right">
+        <ul>
+          <li>Login</li>
+          <li class="register"> Register </li>
+          
+        </ul>
+
+      </div>
+    </div> 
+    
+  </nav>
+
+  <section class="main-section">
+    <div class="main-section-right">
+      <img class="hero-img-desktop" src="./images/image-hero-desktop.png" alt="">
+      <img class="hero-img-mobile" src="./images/image-hero-mobile.png" alt="">
+    </div>
+    <div class="main-section-left">
+      <div class="main-text">
+        Make 
+       <div>remote work</div> 
+      </div>
+      <div class="subtext">
+        Get your team in sync, no matter your location. Streamline processes, 
+        create team rituals, and watch productivity soar.
+      </div>
+  
+      <div class="learn-more">
+       <button class="btn"> Learn more </button> 
+      </div>
+
+      <div class="clients">
+
+        <div class="client" > <img src="./images/client-databiz.svg" alt=""> </div>
+        <div class="client"> <img src="./images/client-audiophile.svg" alt=""> </div>
+        <div class="client"> <img src="./images/client-meet.svg" alt=""> </div>
+        <div class="client"> <img src="./images/client-maker.svg" alt=""> </div>
+
+      </div>
+
+    </div>
+
+   
+    
+  </section>
+
+  
+
+  
+
+  
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+
+<script>
+  function closeMenu(){
+    document.getElementsByClassName('navitems')[0].style.display='none'
+    document.body.style.backgroundColor="transparent"
+  }
+  function openMenu(){
+    document.getElementsByClassName('navitems')[0].style.display='block'
+    document.body.style.backgroundColor="rgba(0,0,0,0.5)"
+    // document.body.style.opacity='50%'
+  }
+</script>
+</html>
